@@ -1,4 +1,4 @@
-package logging
+package go_logging
 
 import (
 	"fmt"
