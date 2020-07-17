@@ -1,3 +1,3 @@
-module github.com/cgroves3/go-logging
+module github.com/cgroves3/logging
 
 go 1.13
