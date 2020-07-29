@@ -27,6 +27,10 @@ func toString(request *http.Request) string {
 	return requestStr
 }
 
+func LogHandler(handler http.Handler) http.Handler {
+	return LogHandlerFunc(handler.ServeHTTP)
+}
+
 func LogHandlerFunc(handlerFunc http.HandlerFunc) http.HandlerFunc {
 	return func (writer http.ResponseWriter, request *http.Request) {
 		if Logger != nil {
